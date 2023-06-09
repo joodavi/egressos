@@ -7,5 +7,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import br.ufma.egressos.model.Contact;
 
 public interface ContactRepository extends JpaRepository <Contact, UUID>{
-    
+    Contact findByName(String name);
 }

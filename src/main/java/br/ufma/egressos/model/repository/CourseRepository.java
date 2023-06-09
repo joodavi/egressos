@@ -7,5 +7,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import br.ufma.egressos.model.Course;
 
 public interface CourseRepository extends JpaRepository<Course, UUID>{
-    
+    Course findByName(String name);
 }

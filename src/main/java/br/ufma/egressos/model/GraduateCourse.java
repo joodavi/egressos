@@ -12,11 +12,13 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Entity
 @Builder
 @AllArgsConstructor
+@NoArgsConstructor
 @Table(name="graduate_course")
 public class GraduateCourse {
     @EmbeddedId
@@ -25,8 +27,8 @@ public class GraduateCourse {
     @Column(name = "initial_date")
     LocalDate initialDate;
 
-    @Column(name = "completion_date")
-    LocalDate completionDate;
+    @Column(name = "finish_date")
+    LocalDate finishDate;
 
     // relationships
 
